@@ -6,15 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
 public class Books {
-	private Long id;
+	private Integer id;
 	private String title;
-	private String descriere;
+	private String description;
 	private Date publicaTionDate;
 	private Date uploadDate;
 	private Integer numberOfDownloads;
@@ -23,11 +25,11 @@ public class Books {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -39,12 +41,12 @@ public class Books {
 		this.title = title;
 	}
 
-	public String getDescriere() {
-		return descriere;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescriere(String descriere) {
-		this.descriere = descriere;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Temporal(TemporalType.DATE)
@@ -74,6 +76,7 @@ public class Books {
 	}
 
 	@ManyToOne
+	@JoinTable(name = "uploaded_books", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "uploader_id"))
 	public User getUploader() {
 		return uploader;
 	}

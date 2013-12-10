@@ -5,10 +5,12 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,7 +18,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class User extends Person {
 
-	private Long id;
+	private Integer id;
 	private String email;
 	private String password;
 	private Date createdDate;
@@ -24,11 +26,11 @@ public class User extends Person {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -57,8 +59,8 @@ public class User extends Person {
 		this.createdDate = createdDate;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "uploaded_books")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinTable(name = "uploaded_books", joinColumns = @JoinColumn(name = "uploader_id"), inverseJoinColumns = @JoinColumn(name = "book_id"))
 	public List<Books> getUploadedBooks() {
 		return uploadedBooks;
 	}

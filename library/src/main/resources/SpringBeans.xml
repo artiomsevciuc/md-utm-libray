@@ -5,9 +5,10 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- Database Configuration -->
 	<import resource="config/spring/DataSource.xml" />
+	<import resource="config/spring/app-context.xml" />
 	<import resource="config/spring/HibernateSessionFactory.xml" />
 
 	<!-- Beans Declaration -->
-	<import resource="md/utm/strutsspringhibernate/customer/bo/CustomerBean.xml" />
+	<import resource="md/utm/strutsspringhibernate/bo/CustomerBean.xml" />
 
 </beans>

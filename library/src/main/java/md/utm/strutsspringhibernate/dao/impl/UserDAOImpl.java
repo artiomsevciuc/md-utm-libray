@@ -6,23 +6,7 @@ import md.utm.strutsspringhibernate.dao.UserDAO;
 import md.utm.strutsspringhibernate.model.Books;
 import md.utm.strutsspringhibernate.model.User;
 
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-
-@SuppressWarnings("unchecked")
-public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
-
-	public void createUser(User user) {
-		getHibernateTemplate().save(user);
-
-	}
-
-	public void updateUser(User user) {
-		getHibernateTemplate().update(user);
-	}
-
-	public List<User> retrieveAllUsers() {
-		return getHibernateTemplate().find("from User");
-	}
+public class UserDAOImpl extends GenericDaoImpl implements UserDAO {
 
 	public List<Books> retrieveAllUploadedUserBooks(User user) {
 		return getHibernateTemplate().find(
