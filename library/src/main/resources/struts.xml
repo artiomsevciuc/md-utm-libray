@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="login">
+			<result>pages/login.jsp</result>
+		</action>
+		
+		<action name="loginauth"
+			class="md.utm.strutsspringhibernate.customer.action.LoginAuthAction">
+			<result name="success" type="redirect">
+				<param name="location">/index.jsp</param>
+			</result>
+			<result name="error">
+				pages/login.jsp
+			</result>
+		</action>
+		
+		<action name="addCustomerAction" class="customerAction" method="addCustomer">
+			<result name="success">pages/customer.jsp</result>
+			<result name="error">pages/login.jsp</result>
+		</action>
+
+		<action name="listCustomerAction" class="customerAction"
+			method="listCustomer">
+			<result name="success">pages/customer.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
