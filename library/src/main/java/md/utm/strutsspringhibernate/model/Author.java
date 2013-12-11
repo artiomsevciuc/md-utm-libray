@@ -18,7 +18,7 @@ public class Author extends Person {
 	private Integer id;
 	private Date birthDate;
 	private Date ripDate;
-	private List<Books> writtenBooks;
+	private List<Book> writtenBooks;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -50,11 +50,11 @@ public class Author extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "written_books")
-	public List<Books> getWrittenBooks() {
+	public List<Book> getWrittenBooks() {
 		return writtenBooks;
 	}
 
-	public void setWrittenBooks(List<Books> writtenBooks) {
+	public void setWrittenBooks(List<Book> writtenBooks) {
 		this.writtenBooks = writtenBooks;
 	}
 

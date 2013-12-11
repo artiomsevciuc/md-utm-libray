@@ -7,10 +7,21 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="appDefaultStack">
+				<interceptor-ref name="defaultStack">
+					<param name="exception.logEnabled">true</param>
+					<param name="exception.logLevel">ERROR</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="appDefaultStack" />
+
 		<action name="login">
 			<result>pages/login.jsp</result>
 		</action>
-		
+
 		<action name="loginauth"
 			class="md.utm.strutsspringhibernate.customer.action.LoginAuthAction">
 			<result name="success" type="redirect">
@@ -20,7 +31,7 @@
 				pages/login.jsp
 			</result>
 		</action>
-		
+
 		<action name="addCustomerAction" class="customerAction" method="addCustomer">
 			<result name="success">pages/customer.jsp</result>
 			<result name="error">pages/login.jsp</result>

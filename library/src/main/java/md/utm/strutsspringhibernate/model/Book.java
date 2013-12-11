@@ -13,7 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class Books {
+public class Book {
 	private Integer id;
 	private String title;
 	private String description;

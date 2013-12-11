@@ -22,7 +22,7 @@ public class User extends Person {
 	private String email;
 	private String password;
 	private Date createdDate;
-	private List<Books> uploadedBooks;
+	private List<Book> uploadedBooks;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -61,11 +61,11 @@ public class User extends Person {
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinTable(name = "uploaded_books", joinColumns = @JoinColumn(name = "uploader_id"), inverseJoinColumns = @JoinColumn(name = "book_id"))
-	public List<Books> getUploadedBooks() {
+	public List<Book> getUploadedBooks() {
 		return uploadedBooks;
 	}
 
-	public void setUploadedBooks(List<Books> uploadedBooks) {
+	public void setUploadedBooks(List<Book> uploadedBooks) {
 		this.uploadedBooks = uploadedBooks;
 	}
 
