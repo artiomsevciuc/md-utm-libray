@@ -23,7 +23,7 @@
 		</action>
 
 		<action name="loginauth"
-			class="md.utm.strutsspringhibernate.customer.action.LoginAuthAction">
+			class="md.utm.strutsspringhibernate.action.LoginAuthAction">
 			<result name="success" type="redirect">
 				<param name="location">/index.jsp</param>
 			</result>

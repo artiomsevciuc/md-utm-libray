@@ -1,28 +1,8 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<!DOCTYPEhtmlPUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login page</title>
-<style type="text/css">
-body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-}
 
-.errors {
-	background-color: #FFCCCC;
-	border: 1px solid #CC0000;
-	width: 220px;
-	line-height: 10px;
-}
+<s:include value="../header.jsp"/>
 
-.errors li {
-	list-style: none;
-}
-</style>
-</head>
-<body>
+
 	<s:form action="loginauth" theme="simple">
 		<center>
 			<table width="200">
@@ -53,5 +33,5 @@ body {
 			</table>
 		</center>
 	</s:form>
-</body>
-</html>
+	
+<s:include value="../footer.jsp"/>
