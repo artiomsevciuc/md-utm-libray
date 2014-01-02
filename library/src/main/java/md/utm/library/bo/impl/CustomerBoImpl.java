@@ -1,10 +1,10 @@
-package md.utm.strutsspringhibernate.bo.impl;
+package md.utm.library.bo.impl;
 
 import java.util.List;
 
-import md.utm.strutsspringhibernate.bo.CustomerBo;
-import md.utm.strutsspringhibernate.dao.CustomerDAO;
-import md.utm.strutsspringhibernate.model.Customer;
+import md.utm.library.bo.CustomerBo;
+import md.utm.library.dao.CustomerDAO;
+import md.utm.library.model.Customer;
 
 public class CustomerBoImpl implements CustomerBo {
 

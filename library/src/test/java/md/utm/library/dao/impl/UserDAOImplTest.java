@@ -1,11 +1,11 @@
-package md.utm.strutsspringhibernate.dao.impl;
+package md.utm.library.dao.impl;
 
 import java.util.List;
 
-import md.utm.strutsspringhibernate.dao.UserDAO;
-import md.utm.strutsspringhibernate.exception.ObjectsNotFoundException;
-import md.utm.strutsspringhibernate.model.Book;
-import md.utm.strutsspringhibernate.model.User;
+import md.utm.library.dao.UserDAO;
+import md.utm.library.exception.ObjectsNotFoundException;
+import md.utm.library.model.Book;
+import md.utm.library.model.User;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

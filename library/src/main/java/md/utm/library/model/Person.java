@@ -1,4 +1,4 @@
-package md.utm.strutsspringhibernate.model;
+package md.utm.library.model;
 
 import javax.persistence.MappedSuperclass;
 

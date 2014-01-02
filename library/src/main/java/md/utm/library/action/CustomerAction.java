@@ -1,11 +1,11 @@
-package md.utm.strutsspringhibernate.action;
+package md.utm.library.action;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import md.utm.strutsspringhibernate.bo.CustomerBo;
-import md.utm.strutsspringhibernate.model.Customer;
+import md.utm.library.bo.CustomerBo;
+import md.utm.library.model.Customer;
 
 import com.opensymphony.xwork2.ModelDriven;
 

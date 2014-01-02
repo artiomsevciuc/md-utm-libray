@@ -1,9 +1,9 @@
-package md.utm.strutsspringhibernate.dao.impl;
+package md.utm.library.dao.impl;
 
 import java.util.List;
 
-import md.utm.strutsspringhibernate.dao.CustomerDAO;
-import md.utm.strutsspringhibernate.model.Customer;
+import md.utm.library.dao.CustomerDAO;
+import md.utm.library.model.Customer;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 

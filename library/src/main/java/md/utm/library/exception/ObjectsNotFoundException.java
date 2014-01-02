@@ -1,4 +1,4 @@
-package md.utm.strutsspringhibernate.exception;
+package md.utm.library.exception;
 
 public class ObjectsNotFoundException extends RuntimeException {
 

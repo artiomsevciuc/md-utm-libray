@@ -1,10 +1,10 @@
-package md.utm.strutsspringhibernate.dao.impl;
+package md.utm.library.dao.impl;
 
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
-import md.utm.strutsspringhibernate.dao.GenericDao;
+import md.utm.library.dao.GenericDao;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 

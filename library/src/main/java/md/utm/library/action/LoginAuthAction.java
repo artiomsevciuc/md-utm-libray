@@ -1,9 +1,9 @@
-package md.utm.strutsspringhibernate.action;
+package md.utm.library.action;
 
 import java.util.List;
 
-import md.utm.strutsspringhibernate.dao.CustomerDAO;
-import md.utm.strutsspringhibernate.model.Customer;
+import md.utm.library.dao.CustomerDAO;
+import md.utm.library.model.Customer;
 
 import com.opensymphony.xwork2.ActionSupport;
 
