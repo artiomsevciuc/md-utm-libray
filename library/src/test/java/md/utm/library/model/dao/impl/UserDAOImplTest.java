@@ -1,4 +1,4 @@
-package md.utm.library.dao.impl;
+package md.utm.library.model.dao.impl;
 
 import java.util.List;
 
