@@ -2,10 +2,10 @@ package md.utm.library.dao.impl;
 
 import java.util.List;
 
-import md.utm.library.dao.UserDAO;
-import md.utm.library.entity.Book;
-import md.utm.library.entity.User;
 import md.utm.library.exception.ObjectsNotFoundException;
+import md.utm.library.model.entity.Book;
+import md.utm.library.model.entity.User;
+import md.utm.library.model.library.dao.UserDAO;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

@@ -1,4 +1,4 @@
-package md.utm.library.entity;
+package md.utm.library.model.entity;
 
 import java.util.Date;
 import java.util.List;

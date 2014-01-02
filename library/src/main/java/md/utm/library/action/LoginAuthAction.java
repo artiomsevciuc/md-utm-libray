@@ -2,8 +2,8 @@ package md.utm.library.action;
 
 import java.util.List;
 
-import md.utm.library.dao.CustomerDAO;
-import md.utm.library.entity.Customer;
+import md.utm.library.model.entity.Customer;
+import md.utm.library.model.library.dao.CustomerDAO;
 
 import com.opensymphony.xwork2.ActionSupport;
 

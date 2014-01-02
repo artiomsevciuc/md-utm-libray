@@ -10,7 +10,7 @@
 	<import resource="classpath:/config/spring/app-context.xml" />
 	
 	<bean id="userDAO"
-		class="md.utm.library.dao.impl.UserDAOImpl">
+		class="md.utm.library.model.dao.impl.UserDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

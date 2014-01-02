@@ -8,11 +8,11 @@
 		<property name="customerBo" ref="customerBo" />	
 	</bean>
 
-	<bean id="customerBo" class="md.utm.library.bo.impl.CustomerBoImpl" >
+	<bean id="customerBo" class="md.utm.library.model.bo.impl.CustomerBoImpl" >
 		<property name="customerDAO" ref="customerDAO" />
 	</bean>
 	
-   	<bean id="customerDAO" class="md.utm.library.dao.impl.CustomerDAOImpl" >
+   	<bean id="customerDAO" class="md.utm.library.model.dao.impl.CustomerDAOImpl" >
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
  

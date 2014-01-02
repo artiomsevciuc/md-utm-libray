@@ -9,6 +9,6 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<import resource="config/spring/HibernateSessionFactory.xml" />
 
 	<!-- Beans Declaration -->
-	<import resource="md/utm/library/bo/CustomerBean.xml" />
+	<import resource="md/utm/library/model/bo/CustomerBean.xml" />
 
 </beans>
