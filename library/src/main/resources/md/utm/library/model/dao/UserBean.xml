@@ -7,5 +7,9 @@
  	<bean id="userDAO"	class="md.utm.library.model.dao.impl.UserDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	
+	<bean id="userAction" class="md.utm.library.action.user.CrudUserAction">
+		<property name="userDAO" ref="userDAO" />	
+	</bean>
 
 </beans>
