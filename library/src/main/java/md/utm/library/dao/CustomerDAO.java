@@ -2,7 +2,7 @@ package md.utm.library.dao;
 
 import java.util.List;
 
-import md.utm.library.model.Customer;
+import md.utm.library.entity.Customer;
 
 public interface CustomerDAO {
 

@@ -1,4 +1,4 @@
-package md.utm.library.model;
+package md.utm.library.entity;
 
 import javax.persistence.MappedSuperclass;
 

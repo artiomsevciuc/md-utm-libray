@@ -4,7 +4,7 @@ import java.util.List;
 
 import md.utm.library.bo.CustomerBo;
 import md.utm.library.dao.CustomerDAO;
-import md.utm.library.model.Customer;
+import md.utm.library.entity.Customer;
 
 public class CustomerBoImpl implements CustomerBo {
 

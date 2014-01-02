@@ -2,8 +2,8 @@ package md.utm.library.dao;
 
 import java.util.List;
 
-import md.utm.library.model.Book;
-import md.utm.library.model.User;
+import md.utm.library.entity.Book;
+import md.utm.library.entity.User;
 
 public interface UserDAO extends GenericDao {
 

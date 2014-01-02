@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import md.utm.library.bo.CustomerBo;
-import md.utm.library.model.Customer;
+import md.utm.library.entity.Customer;
 
 import com.opensymphony.xwork2.ModelDriven;
 

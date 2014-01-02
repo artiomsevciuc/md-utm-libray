@@ -3,7 +3,7 @@ package md.utm.library.action;
 import java.util.List;
 
 import md.utm.library.dao.CustomerDAO;
-import md.utm.library.model.Customer;
+import md.utm.library.entity.Customer;
 
 import com.opensymphony.xwork2.ActionSupport;
 
