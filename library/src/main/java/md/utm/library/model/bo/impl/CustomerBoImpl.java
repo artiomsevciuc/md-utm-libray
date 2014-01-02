@@ -3,8 +3,8 @@ package md.utm.library.model.bo.impl;
 import java.util.List;
 
 import md.utm.library.model.bo.CustomerBo;
+import md.utm.library.model.dao.CustomerDAO;
 import md.utm.library.model.entity.Customer;
-import md.utm.library.model.library.dao.CustomerDAO;
 
 public class CustomerBoImpl implements CustomerBo {
 

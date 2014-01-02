@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
-import md.utm.library.model.library.dao.GenericDao;
+import md.utm.library.model.dao.GenericDao;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 

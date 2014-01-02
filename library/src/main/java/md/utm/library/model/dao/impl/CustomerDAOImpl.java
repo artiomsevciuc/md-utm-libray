@@ -2,8 +2,8 @@ package md.utm.library.model.dao.impl;
 
 import java.util.List;
 
+import md.utm.library.model.dao.CustomerDAO;
 import md.utm.library.model.entity.Customer;
-import md.utm.library.model.library.dao.CustomerDAO;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
