@@ -10,5 +10,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- Beans Declaration -->
 	<import resource="md/utm/library/model/bo/CustomerBean.xml" />
+	<import resource="md/utm/library/model/dao/AuthorBean.xml" />
+	<import resource="md/utm/library/model/dao/UserBean.xml" />
 
 </beans>

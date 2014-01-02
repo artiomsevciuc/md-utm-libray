@@ -8,6 +8,6 @@
 	<import resource="classpath:/config/spring/DataSource.xml" />
 	<import resource="classpath:/config/spring/HibernateSessionFactory.xml" />
 	<import resource="classpath:/config/spring/app-context.xml" />
-	<import resource="classpath:/md/utm/library/model/dao/UserBean.xml" />
+	<import resource="classpath:/md/utm/library/model/dao/BookBean.xml" />
 	
 </beans>
