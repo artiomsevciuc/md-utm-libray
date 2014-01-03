@@ -1,14 +1,19 @@
 <project name="library">
 	<property file="../ant.properties" />
+	<property name="webapp" value="../library/src/main/webapp"/>
+	
 	<target name="copyFiles">
 		<copy todir="${tomcatPath}/user" overwrite="true">
-			<fileset dir="../library/src/main/webapp/user" />
+			<fileset dir="${webapp}/user" />
 		</copy>
 		<copy todir="${tomcatPath}/pages" overwrite="true">
-			<fileset dir="../library/src/main/webapp/pages" />
+			<fileset dir="${webapp}/pages" />
 		</copy>
 	</target>
+	
 	<target name="copyHeader">
-		<copy file="../library/src/main/webapp/header.jsp" todir="${tomcatPath}" overwrite="true" />
+		<copy file="${webapp}/header.jsp" todir="${tomcatPath}" overwrite="true" />
 	</target>
+	
+	<target name="copyAll" depends="copyFiles,copyHeader"/>
 </project>

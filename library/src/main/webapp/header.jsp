@@ -26,10 +26,14 @@
 					test="%{#session.logged ==false}">
 					<li class="menuitem"><a href="login">Login</a></li>
 				</s:if>
-				<li class="menuitem"><a href="#">About</a></li>
-				<li class="menuitem"><a href="#">Products</a></li>
-				<li class="menuitem"><a href="#">Services</a></li>
-				<li class="menuitem"><a href="#">Design</a></li>
+				<li class="menuitem"><a href="#">Newest</a></li>
+				<li class="menuitem"><a href="#">Most popular</a></li>
+				<li class="menuitem"><a href="#">Authors</a></li>
+				<s:if
+					test="%{#session.logged ==true}">
+				<li class="menuitem"><a href="#">Upload</a></li>
+				<li class="menuitem"><a href="#">Download</a></li>
+				</s:if>
 			</ul>
 		</div>
 
