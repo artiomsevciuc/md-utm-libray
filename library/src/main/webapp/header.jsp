@@ -17,34 +17,31 @@
 			<h1>
 				University<span class="lighter">Library</span>
 			</h1>
-			<h2>A template by UTM</h2>
+			<h2>
+				A template by UTM<br />
+				<s:if test="%{#session.logged ==true}">
+				Welcome <i>${sessionScope.userName}</i>
+				</s:if>
+			</h2>
 		</div>
 
 		<div id="menu">
 			<ul>
-				<s:if
-					test="%{#session.logged ==false}">
+				<s:if test="%{#session.logged ==false}">
 					<li class="menuitem"><a href="login">Login</a></li>
 				</s:if>
+				<s:else>
+					<li class="menuitem"><a href="logout">Logout</a></li>
+				</s:else>
 				<li class="menuitem"><a href="#">Newest</a></li>
 				<li class="menuitem"><a href="#">Most popular</a></li>
 				<li class="menuitem"><a href="#">Authors</a></li>
-				<s:if
-					test="%{#session.logged ==true}">
-				<li class="menuitem"><a href="#">Upload</a></li>
-				<li class="menuitem"><a href="#">Download</a></li>
+				<s:if test="%{#session.logged ==true}">
+					<li class="menuitem"><a href="#">Upload</a></li>
+					<li class="menuitem"><a href="#">Download</a></li>
 				</s:if>
 			</ul>
 		</div>
 
 		<div id="content">
-			<center>
-				<h3>
-					Welcome <i>${sessionScope.userName}</i>, you have logged in
-					successfully!
-				</h3>
-				<h3>
-					<a href="logout">Logout</a>
-				</h3>
-			</center>
-			Library
+			<a href="index.jsp">Home</a>
