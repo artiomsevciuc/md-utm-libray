@@ -1,0 +1,14 @@
+<project name="library">
+	<property file="../ant.properties" />
+	<target name="copyFiles">
+		<copy todir="${tomcatPath}/user" overwrite="true">
+			<fileset dir="../library/src/main/webapp/user" />
+		</copy>
+		<copy todir="${tomcatPath}/pages" overwrite="true">
+			<fileset dir="../library/src/main/webapp/pages" />
+		</copy>
+	</target>
+	<target name="copyHeader">
+		<copy file="../library/src/main/webapp/header.jsp" todir="${tomcatPath}" overwrite="true" />
+	</target>
+</project>

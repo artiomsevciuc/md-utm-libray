@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-		<title>Library</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+			<title>Library</title>
 </head>
 
 <body>
@@ -22,14 +22,25 @@
 
 		<div id="menu">
 			<ul>
-				<li class="menuitem"><a href="login">Login</a></li>
+				<s:if
+					test="%{#session.logged ==false}">
+					<li class="menuitem"><a href="login">Login</a></li>
+				</s:if>
 				<li class="menuitem"><a href="#">About</a></li>
 				<li class="menuitem"><a href="#">Products</a></li>
 				<li class="menuitem"><a href="#">Services</a></li>
 				<li class="menuitem"><a href="#">Design</a></li>
-				<li class="menuitem"><a href="#">Contact</a></li>
 			</ul>
 		</div>
 
 		<div id="content">
-		Library
+			<center>
+				<h3>
+					Welcome <i>${sessionScope.userName}</i>, you have logged in
+					successfully!
+				</h3>
+				<h3>
+					<a href="logout">Logout</a>
+				</h3>
+			</center>
+			Library
