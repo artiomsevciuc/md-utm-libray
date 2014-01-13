@@ -71,16 +71,6 @@
 			<result name="success"  type="redirectAction">listUsersAction</result>
 		</action>
 		
-		<action name="addCustomerAction" class="customerAction" method="addCustomer">
-			<result name="success">pages/customer.jsp</result>
-			<result name="error">user/login.jsp</result>
-		</action>
-
-		<action name="listCustomerAction" class="customerAction"
-			method="listCustomer">
-			<result name="success">pages/customer.jsp</result>
-		</action>
-
 	</package>
 
 </struts>
