@@ -51,9 +51,24 @@
 			<result name="error">user/createUser.jsp</result>
 		</action>
 		
+		<action name="updateUserAction" class="userAction" method="updateUser">
+			<result name="success"  type="redirectAction">listUsersAction</result>
+			<result name="error" type="redirectAction">listUsersAction</result>
+		</action>
+		
 		<action name="listUsersAction" class="userAction"
-			method="listAllUsers">
+			method="listAllUsers" >
 			<result name="success">user/users.jsp</result>
+		</action>
+		
+		<action name="editUser" class="userAction"
+			method="editUser" >
+			<result name="success">user/createUser.jsp</result>
+		</action>
+		
+		<action name="removeUser" class="userAction"
+			method="removeUser" >
+			<result name="success"  type="redirectAction">listUsersAction</result>
 		</action>
 		
 		<action name="addCustomerAction" class="customerAction" method="addCustomer">

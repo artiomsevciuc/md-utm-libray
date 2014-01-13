@@ -27,4 +27,12 @@ public class UserDAOImpl extends GenericDaoImpl implements UserDAO {
 	public List<User> getAllUsers() {
 		return getHibernateTemplate().find("from User order by admin desc");
 	}
+
+	public User findUser(Integer id) {
+		return get(User.class, id);
+	}
+
+	public void deleteUser(Integer id) {
+		delete(findUser(id));
+	}
 }

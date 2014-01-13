@@ -3,12 +3,17 @@
 <s:include value="../header.jsp" />
 
 <h2>Register user</h2>
-<s:form action="createUserAction">
-	<s:textfield name="name" label="Name" value="" />
-	<s:textfield name="surname" label="Surname" value="" />
-	<s:textfield name="email" label="email" value="" />
+<s:form>
+	<s:textfield name="name" label="Name" value="%{name}" />
+	<s:textfield name="surname" label="Surname" value="%{surname}" />
+	<s:textfield name="email" label="Email" value="%{email}" />
 	<s:password name="password" label="Password" value="" />
-	<s:submit />
+	<s:if test="%{id==null}">
+		<s:submit value="Create" action="createUserAction" />
+	</s:if>
+	<s:else>
+		<s:submit value="Update" action="updateUserAction"/>
+	</s:else>
 </s:form>
 
 <s:include value="../footer.jsp" />
