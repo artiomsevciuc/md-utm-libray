@@ -1,6 +1,8 @@
 package md.utm.library.action.user;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import md.utm.library.model.dao.UserDAO;
 import md.utm.library.model.entity.User;
@@ -9,9 +11,19 @@ import com.opensymphony.xwork2.ModelDriven;
 
 public class CrudUserAction implements ModelDriven<User> {
 
-	User user = new User();
+	private final User user = new User();
 
-	UserDAO userDAO;
+	private UserDAO userDAO;
+
+	private List<User> userList;
+
+	public List<User> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
 
 	public User getModel() {
 		return user;
@@ -32,6 +44,17 @@ public class CrudUserAction implements ModelDriven<User> {
 			return "success";
 		}
 		return "error";
+	}
+
+	// list all users
+	public String listAllUsers() throws Exception {
+		userList = userDAO.getAllUsers();
+		if (userList == null) {
+			userList = new ArrayList<User>();
+		}
+
+		return "success";
+
 	}
 
 }

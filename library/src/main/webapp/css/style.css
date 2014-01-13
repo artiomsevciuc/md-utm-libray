@@ -54,7 +54,7 @@ body {
 #menu {
 	background-image: url(../images/menu.png);
 	background-repeat: no-repeat;
-	width: 940px;
+	width: 1090px;
 	height: 69px;
 	float: left;
 	clear: both;
@@ -92,7 +92,7 @@ a,a:visited {
 	list-style: none;
 	padding: 0px;
 	margin-left: auto;
-	width: 900px;
+	width: 1100px;
 }
 
 #menu li {
@@ -103,7 +103,7 @@ a,a:visited {
 
 #menu a,#menu a:visited {
 	float: left;
-	width: 150px;
+	width: 130px;
 	height: 40px;
 	display: block;
 	text-align: center;

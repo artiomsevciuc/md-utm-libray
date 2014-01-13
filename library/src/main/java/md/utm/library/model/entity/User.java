@@ -22,6 +22,7 @@ public class User extends Person {
 	private String email;
 	private String password;
 	private Date createdDate;
+	private boolean admin;
 	private List<Book> uploadedBooks;
 
 	@Id
@@ -67,6 +68,14 @@ public class User extends Person {
 
 	public void setUploadedBooks(List<Book> uploadedBooks) {
 		this.uploadedBooks = uploadedBooks;
+	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
 	}
 
 }

@@ -7,7 +7,6 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="default" namespace="/" extends="struts-default">
-
 		<interceptors>
 			<interceptor-stack name="appDefaultStack">
 				<interceptor-ref name="defaultStack">
@@ -18,20 +17,22 @@
 		</interceptors>
 
 		<default-interceptor-ref name="appDefaultStack" />
-		
+
+
 		<global-exception-mappings>
 			<exception-mapping result="error"
 				exception="md.utm.library.exception.ObjectsNotFoundException"></exception-mapping>
 		</global-exception-mappings>
-		
+
 		<action name="login">
 			<result>user/login.jsp</result>
 		</action>
-		
-		<action name="logout" class="md.utm.library.action.user.LoginAuthAction" method="logOut">
+
+		<action name="logout" class="md.utm.library.action.user.LoginAuthAction"
+			method="logOut">
 			<result>user/login.jsp</result>
 		</action>
-		
+
 		<action name="register">
 			<result>user/createUser.jsp</result>
 		</action>
@@ -49,7 +50,12 @@
 			<result name="success">index.jsp</result>
 			<result name="error">user/createUser.jsp</result>
 		</action>
-
+		
+		<action name="listUsersAction" class="userAction"
+			method="listAllUsers">
+			<result name="success">user/users.jsp</result>
+		</action>
+		
 		<action name="addCustomerAction" class="customerAction" method="addCustomer">
 			<result name="success">pages/customer.jsp</result>
 			<result name="error">user/login.jsp</result>

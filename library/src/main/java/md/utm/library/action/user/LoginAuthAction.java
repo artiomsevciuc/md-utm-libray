@@ -37,6 +37,7 @@ public class LoginAuthAction extends ActionSupport implements SessionAware {
 			error = false;
 			sessionMap.put("userName", user.getName());
 			sessionMap.put("logged", true);
+			sessionMap.put("admin", user.isAdmin());
 		}
 
 		if (error) {
@@ -51,6 +52,7 @@ public class LoginAuthAction extends ActionSupport implements SessionAware {
 		if (sessionMap.containsKey("userName")) {
 			sessionMap.remove("userName");
 			sessionMap.put("logged", false);
+			sessionMap.put("admin", false);
 		}
 		return SUCCESS;
 	}

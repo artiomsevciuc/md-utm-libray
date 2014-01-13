@@ -16,6 +16,11 @@
 		<copy file="${webapp}/footer.jsp" todir="${tomcatPath}" overwrite="true" />
 		<copy file="${webapp}/index.jsp" todir="${tomcatPath}" overwrite="true" />
 	</target>
+	
+	<target name="copyCSS">
+		<copy file="${webapp}/css/style.css" todir="${tomcatPath}/css" overwrite="true" />
+		<copy file="${webapp}/css/login.css" todir="${tomcatPath}/css" overwrite="true" />
+	</target>
 
 	<target name="copyAll" depends="copyUserFiles,copyTemplate" />
 </project>

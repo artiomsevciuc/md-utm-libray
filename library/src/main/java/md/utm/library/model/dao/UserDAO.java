@@ -11,4 +11,5 @@ public interface UserDAO extends GenericDao {
 
 	User findUser(String login, String password);
 
+	List<User> getAllUsers();
 }

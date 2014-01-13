@@ -40,6 +40,9 @@
 					<li class="menuitem"><a href="#">Upload</a></li>
 					<li class="menuitem"><a href="#">Download</a></li>
 				</s:if>
+				<s:if test="%{#session.admin ==true}">
+					<li class="menuitem"><a href="listUsersAction">Users</a></li>
+				</s:if>
 			</ul>
 		</div>
 
