@@ -1,0 +1,1 @@
+An example of struts 2 spring and hibernate via one online library
