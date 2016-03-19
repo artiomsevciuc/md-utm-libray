@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
-   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-   "http://struts.apache.org/dtds/struts-2.0.dtd">
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.1.dtd">
 
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
 		<interceptors>
+			<interceptor name="security"
+				class="md.utm.library.security.SecurityInterceptor"></interceptor>
 			<interceptor-stack name="appDefaultStack">
 				<interceptor-ref name="defaultStack">
 					<param name="exception.logEnabled">true</param>
@@ -55,7 +57,9 @@
 		</action>
 
 		<action name="listUsersAction" class="userAction" method="listAllUsers">
+			<interceptor-ref name="security" />
 			<result name="success">user/users.jsp</result>
+			<result name="loginUser">user/login.jsp</result>
 		</action>
 
 		<action name="editUser" class="userAction" method="editUser">

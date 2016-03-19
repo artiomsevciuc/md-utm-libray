@@ -3,27 +3,51 @@
   <display-name>Library</display-name>
   
   <filter>
-	<filter-name>struts2</filter-name>
-	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
   </filter>
   
   <filter-mapping>
-	<filter-name>struts2</filter-name>
-	<url-pattern>/*</url-pattern>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
- 
-  <context-param>
-	<param-name>contextConfigLocation</param-name>
-	<param-value>/WEB-INF/classes/SpringBeans.xml</param-value>
-  </context-param>
   
   <listener>
     <listener-class>
       org.springframework.web.context.ContextLoaderListener
     </listener-class>
   </listener>
+  
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/classes/SpringBeans.xml</param-value>
+  </context-param>
+  
+  <security-role>
+    <role-name>NobodyHasThisRole</role-name>
+  </security-role>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>JSP Files</web-resource-name>
+      <description>No direct access to JSP files</description>
+      <url-pattern>/user/*</url-pattern>
+      <http-method>POST</http-method>
+      <http-method>GET</http-method>
+      <http-method>DELETE</http-method>
+      <http-method>HEAD</http-method>
+      <http-method>OPTIONS</http-method>
+      <http-method>PUT</http-method>
+      <http-method>TRACE</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <description>No direct browser access to JSP files</description>
+      <role-name>NobodyHasThisRole</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
   <welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
 </web-app>
